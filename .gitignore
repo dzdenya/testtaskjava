@@ -1,0 +1,22 @@
+# Package Files #
+*.jar
+*.war
+*.ear
+
+
+# Gradle Files #
+\.gradle/
+
+# Build Files #
+\out/
+\build/
+
+
+# Idea Files #
+\.idea/
+\.idea/workspace\.xml
+\.idea/uiDesigner\.xml
+\.idea/misc\.xml
+\.idea/gradle\.xml
+\.idea/vcs\.xml
+*.iml
