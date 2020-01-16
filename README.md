@@ -1,1 +1,3 @@
 # testtaskjava
+
+./gradlew testRandom

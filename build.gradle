@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+}
+
+group 'TestTask'
+version '1.0-SNAPSHOT'
+
+defaultTasks 'clean', 'test'
+
+sourceCompatibility = JavaVersion.VERSION_11
+targetCompatibility = JavaVersion.VERSION_11
+
+repositories {
+    mavenCentral()
+}
+
+configurations {
+    agent
+}
+
+dependencies {
+    compile 'io.github.cdimascio:java-dotenv:5.1.3'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation 'org.testng:testng:7.0.0'
+    implementation 'io.rest-assured:rest-assured:4.1.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
+}
+
+task testRandom(type: Test) {
+    doFirst {
+        useTestNG {
+            suites 'src/test/resources/suite_run.xml'
+        }
+    }
+}
